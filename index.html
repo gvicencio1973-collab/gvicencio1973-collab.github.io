@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graceful Solutions | Alma Grace P. Cayubit, MBA</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #f8fafc; color: #0f172a; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        header { background-color: #ffffff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; }
+        .logo-container { display: flex; flex-direction: column; }
+        .logo { font-size: 22px; font-weight: 800; color: #090d16; text-decoration: none; letter-spacing: -0.5px; }
+        .sub-logo { font-size: 11px; color: #d4af37; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { text-decoration: none; color: #475569; margin-left: 25px; font-weight: 600; font-size: 15px; }
+        .nav-links a:hover { color: #d4af37; }
+        .header-contact-btn { background-color: #090d16; color: #d4af37; padding: 8px 16px; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 13px; margin-left: 25px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.2s ease; }
+        .header-contact-btn:hover { background-color: #d4af37; color: #090d16; }
+        .hero { background: radial-gradient(circle at top right, #1e293b, #090d16); color: #ffffff; padding: 110px 20px; text-align: center; }
+        .hero h1 { font-size: 55px; margin: 0 0 10px 0; font-weight: 900; letter-spacing: -1px; }
+        .hero h2 { font-size: 18px; color: #d4af37; margin: 0 0 25px 0; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+        .hero p { font-size: 20px; max-width: 800px; margin: 0 auto; color: #cbd5e1; font-weight: 400; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .section-target { scroll-margin-top: 100px; margin-top: 60px; }
+        .section-title { font-size: 28px; color: #090d16; border-bottom: 3px solid #d4af37; padding-bottom: 6px; display: inline-block; margin-bottom: 35px; font-weight: 800; letter-spacing: -0.5px; }
+        .card { background: #ffffff; padding: 35px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; margin-bottom: 25px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .badge { background-color: #090d16; color: #d4af37; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; border-radius: 4px; display: inline-block; margin-top: 15px; letter-spacing: 0.5px; }
+        .badge-budget { background-color: #e6f4ea; color: #137333; }
+        .exp-header { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 12px; }
+        .exp-item { background: #ffffff; padding: 30px; border-radius: 8px; border-left: 4px solid #d4af37; margin-bottom: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
+        .job-date { font-size: 14px; background: #f1f5f9; padding: 4px 12px; border-radius: 4px; font-weight: 700; color: #090d16; }
+        .exp-item ul { padding-left: 20px; color: #475569; margin-top: 10px; }
+        .exp-item li { margin-bottom: 8px; }
+        .clickable-phone { color: #1e293b; text-decoration: none; font-weight: 700; }
+        .clickable-phone:hover { color: #d4af37; text-decoration: underline; }
+        .contact-box { background-color: #090d16; color: #ffffff; padding: 50px 40px; border-radius: 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .contact-box h3 { font-size: 28px; margin-bottom: 15px; font-weight: 800; }
+        .contact-link { color: #ffffff; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; transition: color 0.2s ease; }
+        .contact-link:hover { color: #d4af37; text-decoration: underline; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; color: #d4af37; margin-bottom: 6px; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.15); color: #ffffff; border-radius: 4px; font-size: 15px; }
+        .submit-btn { background-color: #d4af37; color: #090d16; border: none; padding: 14px; font-weight: bold; width: 100%; border-radius: 4px; cursor: pointer; text-transform: uppercase; font-size: 15px; letter-spacing: 0.5px; }
+        .submit-btn:hover { background-color: #e5c158; }
+        footer { text-align: center; padding: 40px; color: #64748b; font-size: 14px; border-top: 1px solid #e2e8f0; margin-top: 80px; }
+        @media (max-width: 992px) { .contact-box { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .hero h1 { font-size: 38px; } .exp-header { flex-direction: column; gap: 5px; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="#" class="logo">Alma Grace P. Cayubit, MBA</a>
+            <div class="sub-logo">Graceful Solutions</div>
+        </div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a href="mailto:almagrace.edu@outlook.com" class="header-contact-btn">EMAIL ME</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div style="font-size: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); color: #d4af37; display: inline-block; padding: 6px 16px; border-radius: 50px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px;">🎯 USA | Australia | Canada Operations</div>
+        <h1>Graceful Solutions</h1>
+        <h2>Premium Bookkeeping & Financial Operations</h2>
+        <p>MBA-credentialed accounting professional providing premium remote ledger management, statutory financial compliance, and operational scaling setups for cross-border international enterprises.</p>
+    </section>
+
+    <main class="container">
+        
+        <div id="about" class="section-target">
+            <h2 class="section-title">Executive Profile</h2>
+            <div class="card">
+                <p>Highly analytical Accounting Specialist and Remote Professional with over 5 years of offshore corporate experience paired with a foundational pedigree in external auditing, statutory controls, and ledger data reconciliation pipelines. Delivers corporate accuracy and streamlined reporting parameters designed to protect financial compliance and unlock growth opportunities for enterprise executives.</p>
+                <div class="grid" style="margin-top: 35px; border-top: 1px solid #f1f5f9; padding-top: 25px;">
+                    <div>
+                        <strong>📈 Fiverr Verified Talent</strong>
+                        <p style="color: #475569; font-size: 14px; margin-top: 5px;">Level 2 Seller (2014 – 2020) with over 300+ successfully completed offshore business projects and a verified 98% client satisfaction rating index.</p>
+                    </div>
+                    <div>
+                        <strong>🛡️ Auditing & Compliance</strong>
+                        <p style="color: #475569; font-size: 14px; margin-top: 5px;">Rigorous regulatory statement validations, control risk analysis, and corporate ledger formatting built on KPMG network principles.</p>
+                    </div>
+                    <div>
+                        <strong>📊 Advanced Architecture</strong>
+                        <p style="color: #475569; font-size: 14px; margin-top: 5px;">Structured P&L design arrays, executive presentation layout setups, and remote back-office real estate CRM pipeline optimization maps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="services" class="section-target">
+            <h2 class="section-title">Corporate Service Suite</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Bookkeeping & Accounting</h3>
+                    <p style="color: #475569; margin-top: 10px;">Flawless day-to-day transaction records, credit ledger adjustments, corporate audits, and executive-ready visual tracking dashboard metrics.</p>
+                    <span class="badge">Elite Executive Grade</span>
+                </div>
+                <div class="card">
+                    <h3>Real Estate Administration</h3>
+                    <p style="color: #475569; margin-top: 10px;">Fulfilling document control files, complex lease validation checks, contract logs, and structural remote asset updating inside CRM systems.</p>
+                    <span class="badge">Elite Executive Grade</span>
+                </div>
+                <div class="card">
+                    <h3>Professional Proofreading</h3>
+                    <p style="color: #475569; margin-top: 10px;">Rigorous linguistic auditing, technical text layouts, research thesis editing validation, and advanced reporting checks for corporate clients.</p>
+                    <span class="badge">Professional Grade</span>
+                </div>
+                <div class="card">
+                    <h3>PowerPoint Executive Slides</h3>
+                    <p style="color: #475569; margin-top: 10px;">Structuring conversion-focused boardroom presentation templates, high-fidelity corporate pitch decks, and investor portfolios built to scale.</p>
